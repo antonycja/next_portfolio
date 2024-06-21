@@ -1,0 +1,43 @@
+/* ul {
+    list-style: none;
+    display: flex;
+}
+
+ul li, .nav-link a{
+    margin: 0 1.2em;
+    padding: 0.25rem 1.2em;
+}
+
+.nav-link {
+    min-width: 8em;
+}
+
+.nav-link a{
+    padding: 0 1.2em;
+    background-color: rgba(25, 50, 66, 0.3);
+    text-align: center;
+    border-radius: 20px;
+    transition-duration: 300ms;
+} */
+/* .nav-logo {
+    width: 10%;
+}
+.logo {
+    width: 100%;
+} */
+
+ul {
+    list-style: none;
+    display: flex;
+}
+
+.nav-container {
+    position: sticky;
+    background-color: #191B37;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 8%;
+}
+
+
+
