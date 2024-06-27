@@ -17,7 +17,9 @@ export default function Navbar() {
 
                 <ul className = "nav-links">
                     {Contents.nav.navLinks.map((navLink, index) => (
-                        <li className="nav-link" key={index} ><a href={"#"+navLink}>{navLink}</a></li>
+                        <a className="nav-link" href={"#"+navLink} key={index}>
+                            <li className="link">{navLink}</li>
+                        </a>
                     ))}
                     <a className="nav-link" href={Contents.nav.cvLink} download>
                         <li className="download-btn">{Contents.nav.btnText}</li>
