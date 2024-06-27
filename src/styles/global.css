@@ -1,4 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap");
+/* 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); */
+
+:root {
+  --font-base: "Poppins", serif;
+  --font-alt: "Open Sans", sans-serif;
+
+  --color-btn-red: #ff4d4d;
+  --color-black: #0c0c0c;
+  --color-bg-white: #eaeaea;
+  --color-white: #ffffff;
+  --color-dark-blue: #191b37;
+  --color-active-btn-blue: #1f5170;
+  --color-bg-blue: #0c1b24;
+  --color-card-bg-gray: #e1e2e3;
+
+  --color-gray: #545454;
+  --color-crimson: #f5efdb;
+  --color-lightgray: #aaaaaa;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+  scroll-padding-top: 22vh;
+}
 body {
-    margin: 0;
-    padding: 0;
+  background-color: var(--color-bg-white);
+  position: relative;
+}
+section {
+  min-height: 85vh;
+  position: relative;
+  width: 85%;
+  margin: auto;
+}
+
+main > section:first-of-type{
+  margin-top: 10%;
+}
+
+section a {
+  color: unset;
+  text-decoration: none;
+}
+button:hover {
+  cursor: pointer;
+}
+main {
+  overflow: hidden;
+}
+.slide-bottom {
+  -webkit-animation: slide-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@-webkit-keyframes slide-bottom {
+  0% {
+    -webkit-transform: translateY(-25%);
+    transform: translateY(-25%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-bottom {
+  0% {
+    -webkit-transform: translateY(-25%);
+    transform: translateY(-25%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
 }
