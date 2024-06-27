@@ -21,8 +21,8 @@ export default function Navbar() {
                             <li className="link">{navLink}</li>
                         </a>
                     ))}
-                    <a className="nav-link" href={Contents.nav.cvLink} download>
-                        <li className="download-btn">{Contents.nav.btnText}</li>
+                    <a className="nav-link download-btn" href={Contents.nav.cvLink} download>
+                        <li className="btn">{Contents.nav.btnText}</li>
                     </a>
                 </ul>
 
