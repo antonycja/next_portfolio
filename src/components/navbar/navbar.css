@@ -26,17 +26,44 @@ ul li, .nav-link a{
     width: 100%;
 } */
 
+
 ul {
     list-style: none;
     display: flex;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+}
+
+nav ul .nav-link {
+    width: 9em;
+    padding: 0.5rem 0.25rem;
+    background-color: rgba(25, 50, 66, 0.3);
+    text-align: center;
+    border-radius: 20px;
+    transition-duration: 300ms;
+    margin-inline: .75rem;
+}
+
+nav a {
+    color: var(--color-white);
+    font-family: var(--font-base);
+    font-weight: 500;
 }
 
 .nav-container {
-    position: sticky;
+    width: 100vw;
+    position: fixed;
     background-color: #191B37;
     display: flex;
     justify-content: space-between;
-    padding: 1rem 8%;
+    padding: 1rem 5rem;
+    align-items: center;
+    z-index: 10;
+}
+
+.social-icon {
+    padding-inline: 0.3em;
 }
 
 
