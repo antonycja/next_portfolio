@@ -1,0 +1,65 @@
+p {
+  font-family: var(--font-roboto);
+  font-weight: 200;
+  font-stretch: wider;
+  color: white;
+}
+span {
+  padding-right: 1px;
+}
+p span {
+  font-style: italic;
+}
+
+div p {
+  display: flex;
+}
+.top-part {
+    display: flex;
+    justify-content: center;
+    line-height: 150%;
+}
+
+div p .username {
+  color: #54bc02;
+}
+.colon {
+  font-weight: 500;
+}
+
+.bash-command {
+  padding-right: 0;
+
+}
+
+.type {
+  display: inline-block; /* Allows width animation */
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  animation: typing 1.2s steps(30, end) forwards;
+  animation-delay: 0.5s;
+  vertical-align: top; /* Keeps it aligned with the cursor */
+}
+
+.bash-cursor {
+  display: inline;
+  font-weight: bold;
+  vertical-align: top; /* Align with .type text */
+  animation: blink 1s infinite;
+}
+.header-data {
+  font-family: var(font-base);
+}
+.header-data h1 {
+  font-size: 6rem;
+  font-weight: 900;
+  text-transform: capitalize;
+  line-height: 130%;
+}
+.header-block {
+    text-align: center;
+}
+.header-block p {
+    text-align: center;
+}
