@@ -63,7 +63,7 @@ nav a {
   justify-content: space-between;
   padding: 1rem 5rem;
   align-items: center;
-  z-index: 10;
+  z-index: 100;
 }
 
 .social-icon a {
