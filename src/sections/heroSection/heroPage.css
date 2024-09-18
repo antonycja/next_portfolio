@@ -1,0 +1,77 @@
+header {
+  width: 85%;
+  height: 100%;
+  margin: auto;
+  position: relative;
+  z-index: 10;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero-shape {
+  --s: 10rem; /* control the size of the cut */
+  --a: 65deg; /* control the depth of the curvature */
+  --r: 22rem; /* control the rounded part */
+  --_m: /var(--r) calc(2 * var(--r)) no-repeat radial-gradient(100% 50% at left, #000
+        calc(100% - 1px), #0000);
+  --_d: (var(--s) + var(--r)) * cos(var(--a));
+
+  /* border: 1px solid red; */
+  width: 50dvw;
+  height: 90dvh;
+  position: absolute;
+  background-color: #193242;
+  z-index: 0;
+
+  border-top-right-radius: 15rem;
+  border-bottom-right-radius: 15rem;
+
+  mask: 100% calc(50% + var(--_d)) var(--_m),
+    100% calc(50% - var(--_d)) var(--_m),
+    radial-gradient(
+        var(--s) at calc(100% + sin(var(--a)) * var(--s)) 50%,
+        #0000 100%,
+        #000 calc(100% + 1px)
+      )
+      calc(var(--r) * (sin(var(--a)) - 1)) 0 no-repeat,
+    linear-gradient(
+      #000 calc(50% - var(--_d)),
+      #0000 0 calc(50% + var(--_d)),
+      #000 0
+    );
+}
+
+.inner-curve {
+  width: 250px;
+  aspect-ratio: 1;
+  background: #ed303c;
+  border-radius: var(--r);
+  --_m: /var(--r) calc(2 * var(--r)) no-repeat radial-gradient(100% 50% at left, #000
+        calc(100% - 1px), #0000);
+  --_d: (var(--s) + var(--r)) * cos(var(--a));
+  mask: 100% calc(50% + var(--_d)) var(--_m),
+    100% calc(50% - var(--_d)) var(--_m),
+    radial-gradient(
+        var(--s) at calc(100% + sin(var(--a)) * var(--s)) 50%,
+        #0000 100%,
+        #000 calc(100% + 1px)
+      )
+      calc(var(--r) * (sin(var(--a)) - 1)) 0 no-repeat,
+    linear-gradient(
+      #000 calc(50% - var(--_d)),
+      #0000 0 calc(50% + var(--_d)),
+      #000 0
+    );
+}
+
+.slide-right .header-data {
+  animation: slide-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation-delay: 2s;
+}
+
+.slide-left .header-data {
+  animation: slide-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation-delay: 2s;
+}
