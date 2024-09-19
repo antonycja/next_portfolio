@@ -15,9 +15,9 @@ div p {
   display: flex;
 }
 .top-part {
-    display: flex;
-    justify-content: center;
-    line-height: 150%;
+  display: flex;
+  justify-content: center;
+  /* line-height: 150%; */
 }
 
 div p .username {
@@ -29,7 +29,6 @@ div p .username {
 
 .bash-command {
   padding-right: 0;
-
 }
 
 .type {
