@@ -49,6 +49,11 @@ div p .username {
 }
 .header-data {
   font-family: var(font-base);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+  /* justify-content: center; */
 }
 .header-data h1 {
   font-size: 6rem;
