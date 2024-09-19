@@ -4,7 +4,7 @@ const Contents = {
     nav: {
         logo: Images.logo,
         btnText: "Download CV",
-        cvLink: "docs/Antony_Maposa_-_Front_End_Web_Developer.pdf",
+        cvLink: "",
         navLinks: ["Home", "About", "Projects", "Contact Me"],
         socials: [
             { name: "github", icon: Images.github, link: "https://github.com/antonycja" },
