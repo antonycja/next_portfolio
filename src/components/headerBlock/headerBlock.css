@@ -62,8 +62,32 @@ div p .username {
   line-height: 130%;
 }
 .header-block {
-    text-align: center;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  gap: 2rem;
 }
 .header-block p {
-    text-align: center;
+  text-align: center;
+}
+
+.hero-button {
+  width: 12.5rem;
+  text-wrap: nowrap;
+  padding: 0.9rem 1.1rem;
+  border-radius: 20px;
+  font-size: 1.15rem;
+  font-weight: 900;
+  background-color: var(--color-btn-red);
+  text-transform: capitalize;
+  border: 1px solid transparent;
+  transition: .25s ease-in-out;
+}
+
+.hero-button:hover {
+  cursor: pointer;
+  border: 1px solid var(--color-btn-red);
+  background-color: transparent;
+  color: var(--color-btn-red);
+
 }
