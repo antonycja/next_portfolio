@@ -1,52 +1,3 @@
-p {
-  font-family: var(--font-roboto);
-  font-weight: 200;
-  font-stretch: wider;
-  color: white;
-}
-span {
-  padding-right: 1px;
-}
-p span {
-  font-style: italic;
-}
-
-div p {
-  display: flex;
-}
-.top-part {
-  display: flex;
-  justify-content: center;
-  /* line-height: 150%; */
-}
-
-div p .username {
-  color: #54bc02;
-}
-.colon {
-  font-weight: 500;
-}
-
-.bash-command {
-  padding-right: 0;
-}
-
-.type {
-  display: inline-block; /* Allows width animation */
-  white-space: nowrap;
-  overflow: hidden;
-  width: 0;
-  animation: typing 1.2s steps(30, end) forwards;
-  animation-delay: 0.5s;
-  vertical-align: top; /* Keeps it aligned with the cursor */
-}
-
-.bash-cursor {
-  display: inline;
-  font-weight: bold;
-  vertical-align: top; /* Align with .type text */
-  animation: blink 1s infinite;
-}
 .header-data {
   font-family: var(font-base);
   display: flex;
@@ -69,6 +20,7 @@ div p .username {
 }
 .header-block p {
   text-align: center;
+  display: flex;
 }
 
 .hero-button {
@@ -81,7 +33,7 @@ div p .username {
   background-color: var(--color-btn-red);
   text-transform: capitalize;
   border: 1px solid transparent;
-  transition: .25s ease-in-out;
+  transition: 0.25s ease-in-out;
 }
 
 .hero-button:hover {
@@ -89,5 +41,4 @@ div p .username {
   border: 1px solid var(--color-btn-red);
   background-color: transparent;
   color: var(--color-btn-red);
-
 }
