@@ -25,7 +25,10 @@ nav a {
 
 .link {
   font-family: var(--font-base);
+}
 
+.link:hover {
+  cursor: pointer;
 }
 
 .nav-link:hover {
