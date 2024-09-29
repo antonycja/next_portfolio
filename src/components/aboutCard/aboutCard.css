@@ -1,0 +1,90 @@
+.card-container {
+  position: relative;
+  background: var(--color-card-bg-gray);
+  border-radius: 3rem;
+  overflow: hidden;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.04);
+  list-style: none;
+  outline: 2px solid transparent;
+  transition: outline 0.5s ease;
+  color: #000;
+  aspect-ratio: 1/1;
+}
+
+.card-content {
+  padding: 1rem 3rem;
+  padding-bottom: 3rem;
+  text-decoration: none;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.title-part {
+  position: relative;
+  padding: 1rem 3rem;
+  text-align: center;
+  z-index: 10;
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Align content vertically */
+  flex-direction: column; /* Ensures vertical layout */
+}
+
+.title-img img {
+  position: absolute;
+  top: 0; /* Adjust this value to control how much the image overlaps */
+  left: 100%;
+  transform: translateX(-100%); /* Center image horizontally */
+  z-index: -10;
+  max-width: 100%; /* Optional: Adjust size if necessary */
+  height: 130%;
+  scale: 1;
+}
+
+.card-content p {
+  font-family: var(--font-base);
+  font-size: 1.15rem;
+  color: #000;
+  padding-top: 1rem;
+  /* font-weight: normal; */
+}
+
+.card-container:hover {
+  cursor: default;
+  outline: 2px solid var(--color-dark-blue);
+}
+
+.tools {
+  display: flex;
+  /* gap: .5rem; */
+  font-family: var(--font-roboto);
+  font-weight: 300;
+  line-height: 100%;
+  /* margin-bottom: 1rem; */
+  /* width: inherit; */
+  flex-wrap: wrap;
+  padding-inline: 1rem;
+  justify-content: center;
+}
+
+.tool {
+  padding: 0.2rem 0.3rem;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  background-color: var(--color-bg-white);
+  margin: 0.2rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+div.card-container:nth-child(2) > div:nth-child(2) > div:nth-child(1) {
+  padding-inline: 5rem;
+}
+div.card-container:nth-child(2) > div:nth-child(2) {
+  padding-inline: 0;
+}
