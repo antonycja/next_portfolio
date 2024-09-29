@@ -4,6 +4,7 @@ import logo_vector from "../../public/nav_images/logo_vector.png";
 import youtube from "../../public/socials_images/youtube.svg";
 import github from "../../public/socials_images/github.svg";
 import linkedin from "../../public/socials_images/linkedin.svg";
+import card_title from "../../public/cards/card_title.png";
 
 
 export const Images = {
@@ -13,4 +14,5 @@ export const Images = {
     youtube,
     github,
     linkedin,
+    card_title,
 };
