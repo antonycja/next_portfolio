@@ -14,7 +14,7 @@ export default function Navbar({ Contents, active, sections }) {
                     alt="logo"
                     priority
                 />
-            </div> 
+            </div>
 
             <ul className="nav-links">
                 {sections.map((section, index) => (
