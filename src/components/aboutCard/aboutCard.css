@@ -49,9 +49,15 @@
 .card-content p {
   font-family: var(--font-base);
   font-size: 1.15rem;
-  color: #000;
+  color: var(--color-black);
   padding-top: 1rem;
-  /* font-weight: normal; */
+}
+
+.card-text {
+  /* color: var(--color-darker-gray); */
+  font-weight: normal;
+  text-wrap: balance;
+  /* line-height: 1.5rem; */
 }
 
 .card-container:hover {
