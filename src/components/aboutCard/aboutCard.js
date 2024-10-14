@@ -1,6 +1,6 @@
 import BashCommand from "../bashCommand/bashCommand";
 import "./aboutCard.css";
-import IconCloud from "@/components/magicui/icon-cloud";
+import IconCloud from "@/components/iconCloud/icon-cloud";
 import Image from "next/image";
 import card_title from "@/../public/cards/card_title.png";
 
@@ -19,7 +19,7 @@ export default function aboutCard({ data = null, isIcons = false }) {
                 <BashCommand topText={data.title} />
             </div>
             <div className="card-content">
-                {isIcons === true ? <IconCloud iconSlugs={skills} /> :
+                {isIcons === true ? <IconCloud iconSlugs={skills} id="stable-cloud-id" /> :
                     <p className="card-text">
                         {data.text}
                     </p>
