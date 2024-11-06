@@ -17,8 +17,8 @@ const Contents = {
         ]
     },
     hero: {
-        name: { top: "whoami", heading: "Antony Maposa", buttonText: "more about me" },
-        role: { top: "echo $ROLE", heading: "software developer", buttonText: "my projects" }
+        name: { top: "whoami", heading: "Antony Maposa", buttonText: "more about me", buttonLink: "#About" },
+        role: { top: "echo $ROLE", heading: "software developer", buttonText: "my projects", buttonLink: "#Projects" }
     },
     about: {
         title_img: Images.card_title,

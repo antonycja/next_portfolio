@@ -6,7 +6,10 @@ export default function HeaderBlock({ headerData }) {
             <BashCommand topText={headerData.top} />
             <div className='header-data'>
                 <h1>{headerData.heading}</h1>
-                <div className="hero-button">{headerData.buttonText}</div>
+                <a href={headerData.buttonLink}>
+                    <div className="hero-button">{headerData.buttonText}</div>
+                </a>
+
             </div>
 
         </div>
