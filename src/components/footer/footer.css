@@ -1,0 +1,20 @@
+/* Footer */
+footer,
+footer p {
+  position: relative;
+  text-align: center;
+  margin: 0;
+  z-index: 3;
+}
+footer p {
+  padding: 1.5rem 2.5rem;
+  font-size: 0.85rem;
+  font-weight: 300;
+  color: rgb(70, 70, 70);
+}
+footer img,
+footer svg {
+  vertical-align: bottom;
+}
+
+/* End of Footer */

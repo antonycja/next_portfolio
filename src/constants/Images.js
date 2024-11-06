@@ -26,6 +26,10 @@ import camp6 from "../../public/projects/camp6.png";
 import lpt1 from "../../public/projects/lpt1.jpg";
 import maze1 from "../../public/projects/maze1.jpg";
 import maze2 from "../../public/projects/maze2.jpg";
+import bottom from "../../public/contact/bottom.png";
+import contact_bg from "../../public/contact/contact-bg.png";
+import envelope from "../../public/contact/envelope.svg";
+import top from "../../public/contact/top.png";
 
 
 export const Images = {
@@ -57,4 +61,8 @@ export const Images = {
     lpt1,
     maze1,
     maze2,
+    bottom,
+    contact_bg,
+    envelope,
+    top,
 };

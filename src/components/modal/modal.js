@@ -8,6 +8,10 @@ export default function Modal({ setState, projectsData }) {
     // const images = [Images.geri, Images.fottis]
     // const images = Object.keys(Images).map(key => Images[key]);
 
+    const contact = () => {
+        setState(false)
+        alert("clicked")
+    }
 
     return (
         <div className="modal-container" onClick={() => setState(false)}>
@@ -34,7 +38,7 @@ export default function Modal({ setState, projectsData }) {
                             <div className="text-block">
                                 <article className="key-feature">
                                     {projectsData.more.all_features.features.map((currFeature, index) => (
-                                        <DetailCard cardInfo={currFeature} id={index}/>
+                                        <DetailCard cardInfo={currFeature} id={index} key={index} />
                                     ))}
                                 </article>
                             </div>
@@ -52,6 +56,9 @@ export default function Modal({ setState, projectsData }) {
                             </article>
 
                         </div>
+                    </div>
+                    <div className="modal-contact">
+                        <a href="#Contact" onClick={contact} className="modal-contact-btn">Contact me</a>
                     </div>
 
                 </div>

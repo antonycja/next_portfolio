@@ -3,7 +3,7 @@ import './navbar.css';
 import Image from "next/image";
 
 export default function Navbar({ Contents, active, sections }) {
-
+    
     return (
         <nav className="nav-container">
             <div className="nav-logo link">

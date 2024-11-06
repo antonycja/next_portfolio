@@ -5,7 +5,12 @@ const Contents = {
         logo: Images.logo,
         btnText: "Download CV",
         cvLink: "",
-        navLinks: ["Home", "About", "Projects", "Contact Me"],
+        sections: [
+            { id: 'Home', title: 'Home' },
+            { id: 'About', title: 'About' },
+            { id: 'Projects', title: 'Projects' },
+            { id: 'Contact', title: 'Contact Me' }
+        ],
         socials: [
             { name: "github", icon: Images.github, link: "https://github.com/antonycja" },
             { name: "linkedin", icon: Images.linkedin, link: "https://www.linkedin.com/in/antony-maposa/" },
@@ -214,21 +219,29 @@ const Contents = {
                 project_type: "Data Structures & Algorithms",
                 live: { link: "link", text: "open project demo" },
                 github: { link: "https://github.com/antonycja/maze-generation", text: "open project repo" },
-                summary: { title: "summary", text: "something was not right" },
+                summary: { title: "summary", text: "I built a real-time maze generation and solving program using the depth-first search algorithm, visualized with Python's Turtle graphics. The maze is generated step by step, allowing users to watch the process unfold. Similarly, the solver navigates the maze in real time, dynamically finding its way from start to finish. This project combines algorithmic problem-solving with engaging visual feedback, demonstrating my skills in creating interactive experiences through code. It showcases my ability to work with algorithms and bring them to life in a visually intuitive manner." },
                 all_features: {
-                    title: "key features",
+                    title: "Key Features",
                     features: [
-                        { key: "feature1", feature: "this is it" },
-                        { key: "feature2", feature: "and this is just another one" },
+                        { key: "real_time", feature: "Real-time maze generation and visualization using Turtle graphics." },
+                        { key: "algorithm", feature: "Depth-first search algorithm for maze solving." },
+                        { key: "interactive", feature: "Interactive experience allowing users to watch maze creation and solving." },
+                        { key: "user_input", feature: "Customizable maze size based on user input." },
+                        { key: "animation", feature: "Smooth animation of the maze solving process." },
+                        { key: "complexity", feature: "Ability to generate mazes with varying complexity levels." },
                     ]
                 },
                 all_technologies: {
                     title: "Technologies Used",
                     technologies: [
-                        { key: "tech", technology: "" },
-                        { key: "", technology: "" },
+                        { key: "python", feature: "Used for implementing the maze generation and solving logic." },
+                        { key: "turtle", feature: "Utilized for real-time graphics and visualization of the maze." },
+                        { key: "depth_first_search", feature: "Algorithm employed to find solutions in the maze." },
+                        { key: "data_structures", feature: "Stack data structure used for backtracking during maze solving." },
+                        { key: "visualization", feature: "Real-time visualization techniques for dynamic user interaction." },
                     ]
                 }
+
             }
         }, {
             card_title: "web",
