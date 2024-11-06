@@ -1,5 +1,6 @@
 import { lazy, Suspense } from 'react';
 import Contents from "@/constants/data.js";
+import Head from "next/head";
 
 const HeroSection = lazy(() => import("@/sections/heroSection/heroPage.js"));
 const AboutSection = lazy(() => import("@/sections/aboutSection/aboutPage.js"));
@@ -10,6 +11,9 @@ const ContactSection = lazy(() => import("@/sections/contactSection/contactPage.
 export default function Home() {
   return (
     <>
+      <Head>
+        <title>Antony M | Web Dev</title>
+      </Head>
       <Suspense fallback={<div>Good Things take time...<br />
         Loading...</div>}>
         <section id="Home">

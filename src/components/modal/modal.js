@@ -51,7 +51,7 @@ export default function Modal({ setState, projectsData }) {
 
                             <article className="technologies">
                                 {projectsData.more.all_technologies.technologies.map((currTechnologies, index) => (
-                                    <DetailCard cardInfo={currTechnologies} id={index} />
+                                    <DetailCard cardInfo={currTechnologies} id={index} key={index}/>
                                 ))}
                             </article>
 

@@ -26,7 +26,8 @@ export default function ContactPage() {
                         <div className="contact-form">
                             <div className="heading">
                                 <h1>Like what you see?</h1>
-                                <h3>Let's talk.</h3>
+                                <h3>Let&apos;s talk.</h3>
+
                             </div>
                             <form action="https://formspree.io/f/mgedyljr" method="POST">
                                 <div className="name-email seq">
@@ -55,6 +56,8 @@ export default function ContactPage() {
                                         <span>Email me: </span>
                                         <a href="mailto:cjamaposa@gmail.com">cjamaposa@gmail.com</a>
                                     </p>
+
+
                                 </div>
                             </form>
                         </div>
