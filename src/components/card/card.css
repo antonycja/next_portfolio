@@ -7,12 +7,15 @@
   outline: 2px solid transparent;
   overflow: hidden;
   transition: outline 0.5s ease;
+  min-height: 443px;
+  height: 100%;
   /* display: flex; */
 }
 
 .project-card .card-text {
-  padding: .5rem 2rem;
+  padding: 0.5rem 2rem;
   padding-bottom: 1.5rem;
+  
 }
 .tag {
   font-family: var(--font-roboto);
@@ -47,6 +50,8 @@
 }
 
 .project-card .arrow {
+  position: absolute;
+  bottom: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
