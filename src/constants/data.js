@@ -1,10 +1,9 @@
 import { Images } from "./Images.js"
-
 const Contents = {
     nav: {
         logo: Images.logo,
         btnText: "Download CV",
-        cvLink: "",
+        cvLink: "/cv.pdf",
         sections: [
             { id: 'Home', title: 'Home' },
             { id: 'About', title: 'About' },

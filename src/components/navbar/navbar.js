@@ -25,7 +25,7 @@ export default function Navbar({ Contents, active, sections }) {
                         <li className="link">{section.title}</li>
                     </a>
                 ))}
-                <a className="nav-link download-btn" href={Contents.nav.cvLink} download>
+                <a className="nav-link download-btn" href={Contents.nav.cvLink} download="Antony_Maposa_CV">
                     <li className="btn link">{Contents.nav.btnText}</li>
                 </a>
             </ul>
