@@ -36,6 +36,10 @@ export default function Home() {
           <ProjectsSection projects={Contents.projects} />
         </section>
         <section id='Contact'>
+          <div>
+            <h1>This Page is under Construction...</h1>
+            <h3>In the meantime, email me at: <a href="mailto:cjamaposa@gmail.com">cjamaposa@gmail.com</a></h3>
+          </div>
           {/* <ContactSection /> */}
         </section>
       </Suspense>
