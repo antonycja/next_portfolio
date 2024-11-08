@@ -77,6 +77,19 @@ main {
   color: var(--color-white);
   overflow: hidden;
 }
+#Contact div {
+  text-align: center;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#Contact div a{
+  color: #0a58ca;
+}
 
 /* @-webkit-keyframes slide-bottom {
   0% {
