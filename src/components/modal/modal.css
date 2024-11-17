@@ -74,7 +74,14 @@
   margin-top: 2rem;
   width: 80%;
   border-radius: 1.5rem;
+  transition: background-color 0.2s, box-shadow 0.2s; /* Smooth transition */
 }
+
+.modal-contact:hover {
+  background-color: var(--color-btn-hover-red); /* Change to a different hover color */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Add shadow to create depth */
+}
+
 
 .modal-contact-btn {
   display: block;

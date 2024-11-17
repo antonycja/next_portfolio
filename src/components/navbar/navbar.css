@@ -40,9 +40,9 @@ nav a {
   font-family: var(--font-base);
 }
 
-.link:hover {
+/* .link:hover {
   cursor: pointer;
-}
+} */
 
 /* Nav links */
 .nav-link {

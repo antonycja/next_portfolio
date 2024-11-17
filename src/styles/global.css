@@ -26,6 +26,8 @@
   --color-crimson: #f5efdb;
   --color-lightgray: #aaaaaa;
   --color-dark-blue-rgb: 25, 27, 55;
+  --color-btn-hover-red: #e60000;
+
 }
 
 * {
@@ -95,6 +97,10 @@ main {
 #Contact div div {
   display: flex;
   justify-content: center;
+}
+
+.link:hover, .btn:hover {
+  cursor: pointer;
 }
 
 /* @-webkit-keyframes slide-bottom {
