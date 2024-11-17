@@ -20,7 +20,7 @@ export default function Modal({ setState, projectsData }) {
     
         // Calculate the dynamic offset based on the viewport height
         const viewportHeight = window.innerHeight;
-        const dynamicOffset = Math.min(viewportHeight * 0.01, 20); // Max 20px, scales down on smaller screens
+        const dynamicOffset = Math.min(viewportHeight * 0.01, -1); // Max 20px, scales down on smaller screens
     
         // Calculate the target position
         const elementPosition = element.getBoundingClientRect().top;

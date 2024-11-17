@@ -1,20 +1,27 @@
 /* Footer */
-footer,
+footer {
+  /* position: fixed; Keeps footer visible at the bottom */
+  bottom: 0;
+  width: 100%;
+  z-index: 3;
+  background-color: rgba(255, 255, 255, 0.2); /* Slightly transparent background */
+  backdrop-filter: blur(3px); /* Applies the blur effect */
+  -webkit-backdrop-filter: blur(3px); /* Safari compatibility */
+  border-top: 1px solid rgba(0, 0, 0, 0.1); /* Optional border for contrast */
+}
+
 footer p {
   position: relative;
   text-align: center;
   margin: 0;
-  z-index: 3;
-}
-footer p {
   padding: 1.5rem 2.5rem;
   font-size: 0.85rem;
   font-weight: 300;
-  color: rgb(70, 70, 70);
+  color: rgb(70, 70, 70); /* Adjust text color for readability */
+  z-index: 3; /* Ensures text appears above background */
 }
+
 footer img,
 footer svg {
   vertical-align: bottom;
 }
-
-/* End of Footer */

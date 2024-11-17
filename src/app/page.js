@@ -36,16 +36,16 @@ export default function Home() {
           <ProjectsSection projects={Contents.projects} />
         </section>
         <section id='Contact'>
-          <div className='temp'>
+          {/* <div className='temp'>
             <h1>This Page is under Construction... <span style={{ fontSize: 2 + 'rem' }}>&#129379;</span></h1>
             <div>
               <LottieAnimation />
             </div>
-            {/* <span style={{ fontSize: 100 + 'px' }}>&#129379; &#127859;</span> */}
-            <h3>In the meantime, email me at: <a href="mailto:cjamaposa@gmail.com">cjamaposa@gmail.com</a></h3>
-          </div>
 
-          {/* <ContactSection /> */}
+            <h3>In the meantime, email me at: <a href="mailto:cjamaposa@gmail.com">cjamaposa@gmail.com</a></h3>
+          </div> */}
+
+          <ContactSection />
         </section>
       </Suspense>
       <Footer />

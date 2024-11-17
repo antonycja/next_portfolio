@@ -2,27 +2,25 @@
 import dynamic from "next/dynamic";
 import { Images } from "@/constants/Images";
 import Image from "next/image";
-import Footer from "@/components/footer/footer";
+import "./contactPage.css"
 
 // Dynamically import LottieAnimation, ensuring it's only rendered on the client-side
-const LottieAnimation = dynamic(() => import("@/components/envelope/envelope"), {
-    ssr: false,  // Disable SSR to prevent hydration issues
-});
+const LottieAnimation = dynamic(() => import("@/components/envelope/envelope"));
 
 export default function ContactPage() {
     return (
         <div className="contact">
             <Image src={Images.top} className="top-img" alt="Top image" />
             <Image src={Images.bottom} className="bottom-img" alt="Bottom image" />
-            <div className="contact-me-bg">
-                <main className="contact-me">
-                    <div className="contact-box">
+            <main className="contact-me">
+                <div className="contact-box">
                         <div className="image-side">
+                            <Image src={Images.contact_bg} className="c-bg" alt="Contact Background" />
                             <div className="env">
                                 <LottieAnimation />
                             </div>
-                            <Image src={Images.contact_bg} className="c-bg" alt="Contact Background" />
                         </div>
+                    {/* 
                         <div className="contact-form">
                             <div className="heading">
                                 <h1>Like what you see?</h1>
@@ -61,10 +59,9 @@ export default function ContactPage() {
                                 </div>
                             </form>
                         </div>
-                    </div>
-                </main>
-            </div>
-            <Footer />
+                */}
+                </div>
+            </main>
         </div>
     );
 }

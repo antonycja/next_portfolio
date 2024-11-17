@@ -46,7 +46,7 @@ export default function Navbar({ Contents, active, sections }) {
         // Calculate offset based on viewport height
         // Using a smaller percentage (e.g., 2%) for mobile
         const viewportHeight = window.innerHeight;
-        const dynamicOffset = Math.min(viewportHeight * 0.01, 20); // Max 20px, scales down on smaller screens
+        const dynamicOffset = Math.min(viewportHeight * 0.01, -1); // Max 20px, scales down on smaller screens
 
         const elementPosition = element.getBoundingClientRect().top;
         const offsetPosition = elementPosition + window.scrollY - (navHeight + dynamicOffset);
