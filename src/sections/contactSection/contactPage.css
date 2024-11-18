@@ -38,14 +38,17 @@
   margin-top: 10%;
   position: relative;
   border-radius: 2em;
-  background-color: rgba(18, 36, 47, 1);
-  position: relative;
-  /* border: 2px solid white; */
+  background: linear-gradient(145deg, rgba(18, 36, 47, 1), rgba(34, 58, 72, 1));
+  box-shadow: 
+    4px 4px 10px rgba(18, 36, 47, 0.1), /* Bottom-right shadow */
+    -4px -4px 10px rgba(255, 255, 255, 0.1); /* Top-left light */
   width: 70dvw;
   height: 60dvh;
   z-index: 1;
+  display: flex;
   justify-content: flex-start !important;
 }
+
 
 .image-side {
   position: relative;

@@ -92,13 +92,14 @@ export default function Navbar({ Contents, active, sections }) {
                         <li className="link">{section.title}</li>
                     </div>
                 ))}
-                <Link
+                <a
                     className="nav-link download-btn"
                     href={Contents.nav.cvLink}
                     download="Antony_Maposa_CV"
+                    target='_blank'
                 >
                     <li className="btn link">{Contents.nav.btnText}</li>
-                </Link>
+                </a>
             </ul>
 
             <ul className="social-links">
