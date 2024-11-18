@@ -39,22 +39,23 @@
   position: relative;
   border-radius: 2em;
   background: linear-gradient(145deg, rgba(18, 36, 47, 1), rgba(34, 58, 72, 1));
-  box-shadow: 
-    4px 4px 10px rgba(18, 36, 47, 0.1), /* Bottom-right shadow */
-    -4px -4px 10px rgba(255, 255, 255, 0.1); /* Top-left light */
+  box-shadow: 4px 4px 10px rgba(18, 36, 47, 0.1),
+    /* Bottom-right shadow */ -4px -4px 10px rgba(255, 255, 255, 0.1); /* Top-left light */
   width: 70dvw;
   height: 60dvh;
   z-index: 1;
   display: flex;
-  justify-content: flex-start !important;
+  justify-content: space-between;
 }
-
 
 .image-side {
   position: relative;
   height: 100%;
   /* width: 50%; */
   aspect-ratio: 10/9;
+  display: flex;
+  justify-content: center;
+  flex-shrink: 0;
   overflow: hidden;
 }
 
@@ -66,64 +67,41 @@
   align-items: center;
   z-index: 100;
 }
-
-
-
-
+.env > lottie-player:nth-child(1) {
+  width: 100% !important;
+  height: 100% !important;
+  padding: 4rem;
+}
 
 .contact-form {
-  border: 1px solid red;
-  position: absolute;
-  width: 53%;
+  flex-grow: 1;
   height: 100%;
-  right: 0;
   border-radius: 2rem;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.2);
   z-index: 2;
-}
-.success {
-  position: absolute;
-  z-index: 0;
-  left: 33%;
-  bottom: 35%;
-}
-.success-animation {
-  width: 100%;
-  height: 100vh;
-  background-size: cover;
-  pointer-events: none;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
-.env-text {
-  position: absolute;
-  z-index: -1;
-  text-align: center;
-  color: white;
-  font-size: 7rem;
-  font-weight: 500;
-  top: 55%;
-  left: 35%;
-  opacity: 0;
-}
-
-/* form */
 .heading {
-  margin: 2em 2em 2em;
+  margin: 1.5rem 2rem;
   color: #fff;
-  font-weight: 500;
-  font-size: 2.25rem;
+  flex-direction: column;
+  width: 100%;
 }
+
 .heading h3 {
-  color: rgba(255, 52, 0, 0.6);
+  color: var(--color-btn-red);
   font-size: 1.5rem;
+  font-weight: 500;
 }
-form,
-form a {
-  margin: 2em;
-  font-weight: 200;
-  font-size: 0.9rem;
-  color: rgba(156, 156, 156, 1);
+.heading h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  font-family: var(--font-base);
 }
+
 .input-grp {
   margin-bottom: 3em;
   position: relative;
@@ -131,10 +109,29 @@ form a {
 .msg {
   margin-bottom: 1.5em;
 }
+
+form,
+form a {
+  margin: 2em;
+  font-weight: 200;
+  font-size: 0.9rem;
+  color: rgba(156, 156, 156, 1);
+}
+
+#email {
+  width: 120%;
+}
+#name {
+  width: 80%;
+}
+
+
+/* TODO: END */
+
+
 input,
 textarea {
   width: 90%;
-  max-width: 90%;
   padding: 0.5em 0.5em 0.2em;
   outline: 0;
   border: 0;
@@ -145,7 +142,7 @@ textarea {
 }
 input {
   border-bottom: 1px solid rgba(128, 128, 128, 1);
-  max-width: 80%;
+  width: 100%;
 }
 textarea {
   border: 1px solid rgba(128, 128, 128, 1);
@@ -158,7 +155,7 @@ label {
   left: 0;
   top: 0;
   cursor: text;
-  padding: 0.7em;
+  padding: 0.5rem;
   transition: 200ms;
 }
 
@@ -179,14 +176,20 @@ form a {
   font-size: 0.9rem;
   text-align: center;
   color: rgba(0, 0, 0, 1);
-  border-radius: 13px;
+  border-radius: 10px;
   background-color: #ff4d4d;
   width: 7em;
   margin: 0 1.5em 0 0.5em;
 }
+
+.submit-btn a:hover {
+  color: var(--color-hover-link-blue);
+}
+
 .submit-btn button:hover {
   background-color: rgba(0, 0, 0, 0);
-  /* border:.1px solid #ff4d4d; */
+  cursor: pointer;
+  outline:.1px solid #ff4d4d;
   color: #ff4d4d;
 }
 
@@ -203,7 +206,5 @@ textarea:valid ~ label {
 
 .name-email {
   display: flex;
-  justify-content: space-between;
 }
 
-/* End of Contact */

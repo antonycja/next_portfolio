@@ -80,7 +80,7 @@ main {
   color: var(--color-white);
   overflow: hidden;
 }
-#Contact .temp {
+/* #Contact .temp {
   text-align: center;
   position: absolute;
   height: 100%;
@@ -88,16 +88,16 @@ main {
   margin: auto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: center; */
   /* gap: 2rem; */
-}
-#Contact .temp a {
+/* } */
+/* #Contact .temp a {
   color: #0a58ca;
-}
-#Contact div div {
-  display: flex;
-  justify-content: center;
-}
+} */
+/* #Contact div div { */
+  /* display: flex; */
+  /* justify-content: center; */
+/* } */
 
 .link:hover, .btn:hover {
   cursor: pointer;

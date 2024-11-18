@@ -14,52 +14,53 @@ export default function ContactPage() {
             <Image src={Images.bottom} className="bottom-img" alt="Bottom image" />
             <main className="contact-me">
                 <div className="contact-box">
-                        <div className="image-side">
-                            <Image src={Images.contact_bg} className="c-bg" alt="Contact Background" />
-                            <div className="env">
-                                <LottieAnimation />
-                            </div>
+                    <div className="image-side">
+                        <Image src={Images.contact_bg} className="c-bg" alt="Contact Background" />
+                        <div className="env">
+                            <LottieAnimation />
                         </div>
-                    {/* 
-                        <div className="contact-form">
-                            <div className="heading">
-                                <h1>Like what you see?</h1>
-                                <h3>Let&apos;s talk.</h3>
+                    </div>
+                    <div className="contact-form">
+                        <div className="heading">
+                            <h1>Like what you see?</h1>
+                            <h3>Let&apos;s talk.</h3>
+
+                        </div>
+                        <form action="https://formspree.io/f/mgedyljr" method="POST">
+                            <div className="name-email seq">
+                                <div className="input-grp">
+                                    <input name="Full Name" type="text" id="name" required />
+                                    <label htmlFor="name">Full Name</label>
+                                </div>
+                                <div className="input-grp">
+                                    <input name="Email" type="email" id="email" required />
+                                    <label htmlFor="email">Email</label>
+                                </div>
+                            </div>
+
+
+                            <div className="input-grp msg seq">
+                                <textarea
+                                    name="Message"
+                                    id="message"
+                                    rows="5"
+                                    required
+                                ></textarea>
+                                <label htmlFor="message">Message...</label>
+                            </div>
+
+                            <div className="submit-btn seq">
+                                <p>
+                                    <button className="send" type="submit">Submit</button> or
+                                    <span>Email me: </span>
+                                    <a href="mailto:cjamaposa@gmail.com">cjamaposa@gmail.com</a>
+                                </p>
+
 
                             </div>
-                            <form action="https://formspree.io/f/mgedyljr" method="POST">
-                                <div className="name-email seq">
-                                    <div className="input-grp">
-                                        <input name="Full Name" type="text" id="name" required />
-                                        <label htmlFor="name">Full Name</label>
-                                    </div>
-                                    <div className="input-grp">
-                                        <input name="Email" type="email" id="email" required />
-                                        <label htmlFor="email">Email</label>
-                                    </div>
-                                </div>
 
-                                <div className="input-grp msg seq">
-                                    <textarea
-                                        name="Message"
-                                        id="message"
-                                        rows="4"
-                                        required
-                                    ></textarea>
-                                    <label htmlFor="message">Message...</label>
-                                </div>
-                                <div className="submit-btn seq">
-                                    <p>
-                                        <button className="send" type="submit">Submit</button> or
-                                        <span>Email me: </span>
-                                        <a href="mailto:cjamaposa@gmail.com">cjamaposa@gmail.com</a>
-                                    </p>
-
-
-                                </div>
-                            </form>
-                        </div>
-                */}
+                        </form>
+                    </div>
                 </div>
             </main>
         </div>
