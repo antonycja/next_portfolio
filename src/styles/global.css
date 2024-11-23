@@ -71,6 +71,10 @@ main {
   overflow: hidden;
 }
 
+li {
+  list-style: none;
+}
+
 #Home {
   background-color: #0c1b24;
   width: 100%;
@@ -80,6 +84,8 @@ main {
   color: var(--color-white);
   overflow: hidden;
 }
+
+
 /* #Contact .temp {
   text-align: center;
   position: absolute;

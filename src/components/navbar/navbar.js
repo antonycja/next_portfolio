@@ -5,8 +5,9 @@ import Link from 'next/link';
 import Image from "next/image";
 import './navbar.css';
 
-export default function Navbar({ Contents, active, sections }) {
+const Navbar = ({ Contents, active, sections }) => {
     const [isScrolled, setIsScrolled] = useState(false);
+    const [isHamburgerOpen, setIsHamburgerOpen] = useState(false);
     const navRef = useRef(null);
 
     useEffect(() => {
@@ -40,87 +41,152 @@ export default function Navbar({ Contents, active, sections }) {
         const element = document.getElementById(sectionId);
         if (!element) return;
 
-        // Get the actual navbar height
+        setIsHamburgerOpen(false);
+
         const navHeight = navRef.current?.offsetHeight || 0;
-
-        // Calculate offset based on viewport height
-        // Using a smaller percentage (e.g., 2%) for mobile
-        const viewportHeight = window.innerHeight;
-        const dynamicOffset = Math.min(viewportHeight * 0.01, -1); // Max 20px, scales down on smaller screens
-
-        const elementPosition = element.getBoundingClientRect().top;
-        const offsetPosition = elementPosition + window.scrollY - (navHeight + dynamicOffset);
-
-        // Add a check for mobile devices
-        const isMobile = window.innerWidth <= 768;
-        const mobileOffset = isMobile ? 10 : dynamicOffset; // Smaller offset for mobile
+        const offsetPosition = element.offsetTop - navHeight;
 
         window.scrollTo({
-            top: offsetPosition - mobileOffset,
+            top: offsetPosition,
             behavior: 'smooth'
         });
     };
 
-    return (
-        <nav ref={navRef} className={`nav-container ${isScrolled ? 'scrolled' : ''}`}>
-            <div className="nav-logo link">
-                <Image
-                    src={Contents.nav.logo}
-                    width={logoSize}
-                    height={logoSize}
-                    alt="logo"
-                    priority
-                    className="logo-image"
-                />
-            </div>
+    const handleHamburgerClick = () => {
+        setIsHamburgerOpen(!isHamburgerOpen);
+    };
 
-            <ul className="nav-links">
-                {sections.map((section, index) => (
-                    <div
-                        className={`nav-link ${active === section.id ? 'active' : ''}`}
-                        onClick={(e) => handleSectionClick(e, section.id)}
-                        key={index}
-                        role="button"
-                        tabIndex={0}
-                        onKeyDown={(e) => {
-                            if (e.key === 'Enter') {
-                                handleSectionClick(e, section.id);
-                            }
-                        }}
-                        style={{ cursor: 'pointer' }}
+    return (
+        <>
+            <nav ref={navRef} className={`nav-container ${isScrolled ? 'scrolled' : ''}`}>
+                <div className="nav-logo">
+                    <Image
+                        src={Contents.nav.logo}
+                        width={logoSize}
+                        height={logoSize}
+                        alt="logo"
+                        priority
+                        className="logo-image"
+                    />
+                </div>
+
+                <ul className="nav-links desktop-nav">
+                    {sections.map((section, index) => (
+                        <div
+                            className={`nav-link ${active === section.id ? 'active' : ''}`}
+                            onClick={(e) => handleSectionClick(e, section.id)}
+                            key={index}
+                            role="button"
+                            tabIndex={0}
+                            onKeyDown={(e) => {
+                                if (e.key === 'Enter') {
+                                    handleSectionClick(e, section.id);
+                                }
+                            }}
+                            style={{ cursor: 'pointer' }}
+                        >
+                            <li>{section.title}</li>
+                        </div>
+                    ))}
+                    <a
+                        className="nav-link download-btn"
+                        href={Contents.nav.cvLink}
+                        download="Antony_Maposa_CV"
+                        target="_blank"
+                        rel="noopener noreferrer"
                     >
-                        <li className="link">{section.title}</li>
-                    </div>
-                ))}
+                        <li className="btn">{Contents.nav.btnText}</li>
+                    </a>
+                </ul>
                 <a
-                    className="nav-link download-btn"
+                    className="nav-link download-btn mobile-download"
                     href={Contents.nav.cvLink}
                     download="Antony_Maposa_CV"
-                    target='_blank'
+                    target="_blank"
+                    rel="noopener noreferrer"
                 >
-                    <li className="btn link">{Contents.nav.btnText}</li>
+                    <li className="btn">{Contents.nav.btnText}</li>
                 </a>
-            </ul>
+                <div className="right-section">
+                    <ul className="social-links desktop-social">
+                        {Contents.nav.socials.map((social, index) => (
+                            <li className="social-icon" key={index}>
+                                <Link
+                                    href={social.link}
+                                    target="_blank"
+                                    className="link"
+                                >
+                                    <Image
+                                        src={social.icon}
+                                        alt={social.name}
+                                        width={getSocialIconSize(social.name)}
+                                        height={getSocialIconSize(social.name)}
+                                        className={`social-icon-image ${social.name.toLowerCase().includes('linkedin') ? 'linkedin-icon' : ''}`}
+                                    />
+                                </Link>
+                            </li>
+                        ))}
+                    </ul>
 
-            <ul className="social-links">
-                {Contents.nav.socials.map((social, index) => (
-                    <li className="social-icon" key={index}>
-                        <Link
-                            href={social.link}
-                            target="_blank"
-                            className='link'
+                    <button
+                        className={`hamburger-btn ${isHamburgerOpen ? 'open' : ''}`}
+                        onClick={handleHamburgerClick}
+                        aria-label="Toggle menu"
+                    >
+                        <span className="hamburger-line line-1"></span>
+                        <span className="hamburger-line line-2"></span>
+                        <span className="hamburger-line line-3"></span>
+                    </button>
+                </div>
+
+            </nav>
+
+
+            {/* Mobile Menu */}
+            <div className={`hamburger-menu ${isHamburgerOpen ? 'open' : ''}`}>
+                <ul className="nav-links">
+                    {sections.map((section, index) => (
+                        <div
+                            className={`nav-link ${active === section.id ? 'active' : ''}`}
+                            onClick={(e) => handleSectionClick(e, section.id)}
+                            key={index}
+                            role="button"
+                            tabIndex={0}
+                            onKeyDown={(e) => {
+                                if (e.key === 'Enter') {
+                                    handleSectionClick(e, section.id);
+                                }
+                            }}
+                            style={{ cursor: 'pointer' }}
                         >
-                            <Image
-                                src={social.icon}
-                                alt={social.name}
-                                width={getSocialIconSize(social.name)}
-                                height={getSocialIconSize(social.name)}
-                                className={`social-icon-image ${social.name.toLowerCase().includes('linkedin') ? 'linkedin-icon' : ''}`}
-                            />
-                        </Link>
-                    </li>
-                ))}
-            </ul>
-        </nav>
+                            <li>{section.title}</li>
+                        </div>
+                    ))}
+
+                </ul>
+
+                <ul className="social-links">
+                    {Contents.nav.socials.map((social, index) => (
+                        <li className="social-icon" key={index}>
+                            <Link
+                                href={social.link}
+                                target="_blank"
+                                className="link"
+                            >
+                                <Image
+                                    src={social.icon}
+                                    alt={social.name}
+                                    width={getSocialIconSize(social.name)}
+                                    height={getSocialIconSize(social.name)}
+                                    className={`social-icon-image ${social.name.toLowerCase().includes('linkedin') ? 'linkedin-icon' : ''}`}
+                                />
+                            </Link>
+                        </li>
+                    ))}
+                </ul>
+            </div>
+        </>
     );
-}
+};
+
+export default Navbar;
