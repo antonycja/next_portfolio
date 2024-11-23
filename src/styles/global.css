@@ -130,13 +130,32 @@ li {
   }
 }
 
+@keyframes slide-down {
+  0% {
+    transform: translateY(-50vh);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
 @keyframes slide-left {
   0% {
     transform: translateX(+50vw);
   }
   100% {
-    -webkit-transform: translateY(0);
+    -webkit-transform: translateX(0);
     transform: translateX(0);
+  }
+}
+@keyframes slide-up {
+  0% {
+    transform: translateY(+50vh);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
   }
 }
 
