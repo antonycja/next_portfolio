@@ -11,7 +11,7 @@
   border-radius: 10px; /* Rounded corners */
   z-index: 1000;
   width: 100vw;
-  height: 100vh;
+  height: 100dvh;
   overflow: auto; /* Allows scrolling within the modal */
 }
 
@@ -22,6 +22,7 @@
   width: 80%;
   height: 100%;
   overflow-y: auto;
+  overflow-x: hidden;
   border-radius: 10px;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
