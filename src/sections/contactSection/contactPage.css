@@ -125,9 +125,7 @@ form a {
   width: 80%;
 }
 
-
 /* TODO: END */
-
 
 input,
 textarea {
@@ -189,7 +187,7 @@ form a {
 .submit-btn button:hover {
   background-color: rgba(0, 0, 0, 0);
   cursor: pointer;
-  outline:.1px solid #ff4d4d;
+  outline: 0.1px solid #ff4d4d;
   color: #ff4d4d;
 }
 
@@ -208,3 +206,37 @@ textarea:valid ~ label {
   display: flex;
 }
 
+@media screen and (max-width: 575px) {
+  .contact {
+    height: max-content;
+  }
+  .contact-me {
+    width: 90%;
+  }
+  .contact-box {
+    margin-block: 4rem 2rem;
+    flex-direction: column;
+    height: fit-content;
+    width: 100%;
+  }
+  .image-side {
+    aspect-ratio: 4/3;
+    height: auto;
+  }
+
+  .env > lottie-player:nth-child(1) {
+    padding: 1rem;
+  }
+
+  .top-img {
+    width: 80dvw;
+    height: 50dvh;
+  }
+  .bottom-img {
+    width: 80dvw;
+    height: 50dvh;
+  }
+  .contact main {
+    overflow: auto;
+  }
+}

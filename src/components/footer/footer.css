@@ -4,7 +4,12 @@ footer {
   bottom: 0;
   width: 100%;
   z-index: 3;
-  background-color: rgba(255, 255, 255, 0.2); /* Slightly transparent background */
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.2
+  ); /* Slightly transparent background */
   backdrop-filter: blur(3px); /* Applies the blur effect */
   -webkit-backdrop-filter: blur(3px); /* Safari compatibility */
   border-top: 1px solid rgba(0, 0, 0, 0.1); /* Optional border for contrast */
@@ -24,4 +29,10 @@ footer p {
 footer img,
 footer svg {
   vertical-align: bottom;
+}
+
+@media screen and (max-width: 575px) {
+  footer p {
+    padding: .75rem 1.5rem;
+  }
 }
