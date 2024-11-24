@@ -94,7 +94,7 @@
 
   .project-info p {
     font-size: 1rem;
-    text-wrap: nowrap;
+    text-wrap: auto;
   }
   .icons-side {
     gap: 0.5rem;
