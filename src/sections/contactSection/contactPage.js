@@ -50,7 +50,7 @@ export default function ContactPage() {
                             </div>
 
                             <div className="submit-btn seq">
-                                <p>
+                                <p className="email-me">
                                     <button className="send" type="submit">Submit</button> or
                                     <span>Email me: </span>
                                     <a href="mailto:cjamaposa@gmail.com">cjamaposa@gmail.com</a>

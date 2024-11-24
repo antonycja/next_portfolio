@@ -207,6 +207,13 @@ textarea:valid ~ label {
 }
 
 @media screen and (max-width: 575px) {
+  form {
+    text-align: center;
+  }
+  label,
+  text-area {
+    padding-left: 1.5rem;
+  }
   .contact {
     height: max-content;
   }
@@ -238,5 +245,26 @@ textarea:valid ~ label {
   }
   .contact main {
     overflow: auto;
+  }
+
+  input:focus ~ label,
+  input:valid ~ label {
+    padding-left: 1rem;
+    top: -1.6em;
+  }
+  textarea:focus ~ label,
+  textarea:valid ~ label {
+    padding-left: 1rem;
+    top: -2.5em;
+  }
+  .name-email > div:nth-child(2) > label:nth-child(2) {
+    padding-left: 0rem;
+  }
+  div.input-grp:nth-child(1) > label:nth-child(2) {
+    padding-left: 0.8rem;
+  }
+  .email-me, .email-me a {
+    font-weight: 500;
+    line-height: 2.5rem;
   }
 }
