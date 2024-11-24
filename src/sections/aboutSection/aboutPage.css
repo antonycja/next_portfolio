@@ -2,19 +2,34 @@
   position: absolute;
   display: grid;
   justify-items: center; /* Center the cards horizontally */
-  align-items: center;   /* Center the cards vertically */
-  height: 100%;         /* Ensure the container takes up full viewport height */
+  align-items: center; /* Center the cards vertically */
+  height: 100%; /* Ensure the container takes up full viewport height */
   width: 100%;
 }
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   justify-content: center; /* Center the grid container horizontally */
-  align-content: center;  /* Center the grid container vertically */
+  align-content: center; /* Center the grid container vertically */
   width: 100%;
   max-width: 80dvw;
   height: auto;
   margin: auto;
   padding: 2rem 0rem;
   gap: 3rem;
+}
+
+@media screen and (max-width: 575px) {
+  .cards-list {
+    position: static;
+    height: max-content; /* Ensure the container takes up full viewport height */
+    
+  }
+
+  .cards {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    max-width: 90dvw;
+    padding-bottom: 0;
+    /* border: 1px solid green; */
+  }
 }

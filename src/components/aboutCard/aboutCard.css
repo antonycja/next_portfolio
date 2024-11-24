@@ -9,9 +9,13 @@
   transition: outline 0.5s ease;
   color: #000;
   aspect-ratio: 1/1;
+
+  /* border: 1px solid red; */
 }
 
 .card-content {
+  /* border: 1px solid blue; */
+
   padding: 1rem 3rem;
   padding-bottom: 3rem;
   text-decoration: none;
@@ -93,4 +97,44 @@ div.card-container:nth-child(2) > div:nth-child(2) > div:nth-child(1) {
 }
 div.card-container:nth-child(2) > div:nth-child(2) {
   padding-inline: 0;
+}
+
+@media screen and (max-width: 575px) {
+  .card-container {
+    border-radius: 2rem;
+    aspect-ratio: auto;
+  }
+
+  .title-part {
+    padding-bottom: 1.5rem;
+    padding-top: 0.25rem;
+  }
+
+  .title-img img {
+    height: 100%;
+  }
+
+  .card-content {
+    padding: 0.25rem 0.5rem 0rem 0.5rem;
+    text-align: center;
+  }
+  .card-content p {
+    padding-top: 0;
+    font-size: 1rem;
+  }
+
+  div.card-container:nth-child(2) > div:nth-child(2) > div:nth-child(1) {
+    padding-inline: 1rem;
+  }
+
+  .tools {
+    /* gap: 0.5rem; */
+    font-weight: 200;
+    line-height: 90%;
+    margin-bottom: 0.5rem;
+  }
+  .tool {
+    padding: 0.1rem 0.2rem;
+    font-size: 0.7rem;
+  }
 }
