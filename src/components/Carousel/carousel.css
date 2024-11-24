@@ -91,3 +91,9 @@
 .video-dialog {
     display: block;
 }
+
+@media screen and (max-width: 575px) {
+  .carousel {
+    max-width: unset;
+  }
+}

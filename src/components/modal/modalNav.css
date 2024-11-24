@@ -86,3 +86,21 @@
 .modal-close:hover {
   transform: rotate(180deg);
 }
+
+@media screen and (max-width: 575px) {
+  .project-info h1 {
+    font-size: 1.25rem;
+  }
+
+  .project-info p {
+    font-size: 1rem;
+    text-wrap: nowrap;
+  }
+  .icons-side {
+    gap: 0.5rem;
+    height: min-content;
+  }
+  .modal-top {
+    padding: 0.5rem 1rem;
+  }
+}
