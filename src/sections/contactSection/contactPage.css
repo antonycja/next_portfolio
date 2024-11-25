@@ -225,7 +225,21 @@ textarea:valid ~ label {
     flex-direction: column;
     height: fit-content;
     width: 100%;
+    box-shadow: 4px 4px 10px rgba(18, 36, 47, 0.1),
+      /* Bottom-right shadow */ -4px -4px 10px rgba(255, 255, 255, 0.1); /* Top-left light */
   }
+
+  .heading {
+    width: unset;
+  }
+  .heading h3 {
+    font-size: 1.3rem;
+  }
+
+  .heading h1 {
+    font-size: 2rem;
+  }
+
   .image-side {
     aspect-ratio: 4/3;
     height: auto;
@@ -243,9 +257,9 @@ textarea:valid ~ label {
     width: 80dvw;
     height: 50dvh;
   }
-  .contact main {
+  /* .contact main {
     overflow: auto;
-  }
+  } */
 
   input:focus ~ label,
   input:valid ~ label {
@@ -263,7 +277,11 @@ textarea:valid ~ label {
   div.input-grp:nth-child(1) > label:nth-child(2) {
     padding-left: 0.8rem;
   }
-  .email-me, .email-me a {
+  #email {
+    width: 100%;
+  }
+  .email-me,
+  .email-me a {
     font-weight: 500;
     line-height: 2.5rem;
   }
