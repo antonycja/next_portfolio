@@ -206,7 +206,7 @@ textarea:valid ~ label {
   display: flex;
 }
 
-@media screen and (max-width: 575px) {
+@media screen and (max-width: 1024px) {
   form {
     text-align: center;
   }

@@ -8,9 +8,11 @@
   padding-top: 2rem;
 }
 
-@media screen and (max-width: 575px) {
+
+@media screen and (max-width: 1024px) {
   .card-list {
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     margin: 3rem auto;
   }
 }
+

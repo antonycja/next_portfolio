@@ -19,11 +19,10 @@
   gap: 3rem;
 }
 
-@media screen and (max-width: 575px) {
+@media screen and (max-width: 1024px) {
   .cards-list {
     position: static;
     height: max-content; /* Ensure the container takes up full viewport height */
-    
   }
 
   .cards {
@@ -31,5 +30,11 @@
     max-width: 90dvw;
     padding-bottom: 0;
     /* border: 1px solid green; */
+  }
+}
+
+@media screen and (min-width: 1620px) {
+  .cards {
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
   }
 }

@@ -138,3 +138,26 @@ div.card-container:nth-child(2) > div:nth-child(2) {
     font-size: 0.7rem;
   }
 }
+
+@media screen and (min-width: 1620px) {
+  .title-img img {
+    width: 100%; /* Optional: Adjust size if necessary */
+  }
+  .card-content p {
+    font-size: 1.5rem;
+  }
+  .card-content {
+    justify-content: center;
+    padding-bottom: 20%;
+  }
+  div.card-container:nth-child(2) > div:nth-child(2) > div:nth-child(1) {
+    padding-inline: 15%;
+  }
+  .tool {
+    padding: 0.4rem 0.6rem;
+    font-size: 1rem;
+  }
+  .tools {
+    font-weight: 200;
+    }
+}
