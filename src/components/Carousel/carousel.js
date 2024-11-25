@@ -33,8 +33,8 @@ export default function Carousel({ images }) {
                         className={`carousel-item ${index === currentIndex ? "active" : ""
                             }`}
                     >
-                        {index != 0 ? <Image src={image.img} alt={image.alt} width={4000} height={4000} /> :
-                            <Image src={image.img} alt={image.alt} width={4000} height={4000} />}
+                        {index != 0 ? <Image src={image.img} alt={image.alt} width={4000} height={4000} placeholder="blur"/> :
+                            <Image src={image.img} alt={image.alt} width={4000} height={4000} placeholder="blur"/>}
                         {/* TODO: Must replace the copy of this image with a embedded playable video */}
 
                     </div>

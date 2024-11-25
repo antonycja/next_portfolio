@@ -6,7 +6,7 @@ export default function Card({ onClick, projectData }) {
     return <>
         <div className="project-card" onClick={onClick}>
             <div className="card-image">
-                <Image src={projectData.project_images[0].img} alt={projectData.project_images[0].alt} />
+                <Image src={projectData.project_images[0].img} alt={projectData.project_images[0].alt} placeholder="blur" priority/>
             </div>
             <div className="card-text">
                 {projectData.project_tags.map((tag, index) => (
