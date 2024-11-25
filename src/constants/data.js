@@ -1,4 +1,6 @@
 import { Images } from "./Images.js"
+const d = new Date();
+let year = d.getFullYear();
 const Contents = {
     nav: {
         logo: Images.logo,
@@ -242,14 +244,15 @@ const Contents = {
                 }
 
             }
-        }, {
+        },
+        {
             card_title: "web",
             project_images: [
                 { img: Images.fottis1, alt: "fottis finance" },
                 { img: Images.geri, alt: "geri restaurant" }
             ],
-            project_name: "fottis",
-            project_text: "software that is the text within the card",
+            project_name: "coming soon",
+            project_text: "template ",
             project_tags: ["tag1", "tag2", "tag3"],
             more: {
                 project_type: "project type",
@@ -274,8 +277,16 @@ const Contents = {
         },
 
 
-    ]
-
+    ],
+    contact: {
+        lottieAnimation: "https://assets4.lottiefiles.com/packages/lf20_cbc2dy5y.json",
+        heading: "Like what you see?",
+        subHeading: "Let's talk.",
+        btnText: "Submit",
+        email: "cjamaposa@gmail.com",
+    },
+    
+    footer: `Copyright ${year} by AntonyCJA. All rights reserved.`
 
     // sections: { home: {}, about: {}, projects: {}, contact: {} }
 };

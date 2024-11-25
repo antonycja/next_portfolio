@@ -7,7 +7,7 @@ import "./contactPage.css"
 // Dynamically import LottieAnimation, ensuring it's only rendered on the client-side
 const LottieAnimation = dynamic(() => import("@/components/envelope/envelope"));
 
-export default function ContactPage() {
+export default function ContactPage({ data }) {
     return (
         <div className="contact">
             <Image src={Images.top} className="top-img" alt="Top image" />
@@ -17,13 +17,13 @@ export default function ContactPage() {
                     <div className="image-side">
                         <Image src={Images.contact_bg} className="c-bg" alt="Contact Background" />
                         <div className="env">
-                            <LottieAnimation />
+                            <LottieAnimation link={data.lottieAnimation}/>
                         </div>
                     </div>
                     <div className="contact-form">
                         <div className="heading">
-                            <h1>Like what you see?</h1>
-                            <h3>Let&apos;s talk.</h3>
+                            <h1>{data.heading}</h1>
+                            <h3>{data.subHeading}</h3>
 
                         </div>
                         <form action="https://formspree.io/f/mgedyljr" method="POST">
@@ -51,9 +51,9 @@ export default function ContactPage() {
 
                             <div className="submit-btn seq">
                                 <p className="email-me">
-                                    <button className="send" type="submit">Submit</button> or
+                                    <button className="send" type="submit">{data.btnText}</button> or
                                     <span>Email me: </span>
-                                    <a href="mailto:cjamaposa@gmail.com">cjamaposa@gmail.com</a>
+                                    <a href="mailto:cjamaposa@gmail.com">{data.email}</a>
                                 </p>
 
 

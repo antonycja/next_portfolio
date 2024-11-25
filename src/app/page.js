@@ -13,7 +13,6 @@ export const metadata = {
 import { lazy, Suspense } from 'react';
 import Contents from "@/constants/data.js";
 import Footer from '@/components/footer/footer';
-import LottieAnimation from '@/components/envelope/envelope';
 const HeroSection = lazy(() => import("@/sections/heroSection/heroPage.js"));
 const AboutSection = lazy(() => import("@/sections/aboutSection/aboutPage.js"));
 const ProjectsSection = lazy(() => import("@/sections/projectsSection/projectsPage.js"));
@@ -45,10 +44,10 @@ export default function Home() {
             <h3>In the meantime, email me at: <a href="mailto:cjamaposa@gmail.com">cjamaposa@gmail.com</a></h3>
           </div> */}
 
-          <ContactSection />
+          <ContactSection data={Contents.contact}/>
         </section>
       </Suspense>
-      <Footer />
+      <Footer data={Contents.footer}/>
     </>
   );
 }

@@ -1,7 +1,7 @@
 'use client'
 import { useEffect } from 'react';
 
-export default function LottieAnimation() {
+export default function LottieAnimation( {link} ) {
     useEffect(() => {
         // Check if the Lottie Player script is already added
         if (!document.querySelector("script[src='https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js']")) {
@@ -16,7 +16,7 @@ export default function LottieAnimation() {
 
     return (
         <lottie-player
-            src="https://assets4.lottiefiles.com/packages/lf20_cbc2dy5y.json"
+            src={link}
             background="transparent"
             speed="1"
             style={{ width: '300px', height: '300px' }}
