@@ -15,7 +15,6 @@
 .project-card .card-text {
   padding: 0.5rem 2rem;
   padding-bottom: 1.5rem;
-  
 }
 .tag {
   font-family: var(--font-roboto);
@@ -80,17 +79,6 @@
   color: #fff;
 }
 
-/* @media (max-width: 1200px) {
-    .card-list .card-item {
-        padding: 15px;
-    }
-} */
-/* @media screen and (max-width: 980px) {
-    .card-list {
-        margin: 0 auto;
-    }
-} */
-
 .tag:nth-child(6n + 1) {
   color: #ff0000; /* dark red-orange */
   background-image: linear-gradient(
@@ -143,4 +131,14 @@
     rgba(199, 135, 40, 0.4),
     rgba(253, 214, 94, 0.3)
   );
+}
+
+@media screen and (max-width: 575px) {
+  .project-card .card-text h3 {
+    font-size: 1.1rem;
+  }
+
+  .project-card .arrow {
+    bottom: .5rem;
+  }
 }

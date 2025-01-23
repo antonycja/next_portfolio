@@ -1,21 +1,22 @@
-"use client"
-import { useEffect, useState } from "react";
+'use client'
+import { useEffect } from 'react';
 
-function LottieAnimation() {
-    const [isBrowser, setIsBrowser] = useState(false);
-
+export default function LottieAnimation( {link} ) {
     useEffect(() => {
-        // Ensure this runs only on the client-side
-        setIsBrowser(true);
-    }, []);
+        // Check if the Lottie Player script is already added
+        if (!document.querySelector("script[src='https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js']")) {
+            const lottieScript = document.createElement("script");
+            lottieScript.src = "https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js";
+            lottieScript.async = true;
+            document.body.appendChild(lottieScript);
+        }
 
-    if (!isBrowser) {
-        return null;  // Avoid rendering on the server-side
-    }
+        // No cleanup needed here as the script should stay available for other components
+    }, []);
 
     return (
         <lottie-player
-            src="https://assets4.lottiefiles.com/packages/lf20_cbc2dy5y.json"
+            src={link}
             background="transparent"
             speed="1"
             style={{ width: '300px', height: '300px' }}
@@ -24,5 +25,3 @@ function LottieAnimation() {
         ></lottie-player>
     );
 }
-
-export default LottieAnimation;

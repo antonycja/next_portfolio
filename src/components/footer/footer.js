@@ -1,6 +1,6 @@
 import "./footer.css"
 
-export default function Footer() {
+export default function Footer( {data}) {
     return (
         <footer>
             <p>
@@ -9,8 +9,7 @@ export default function Footer() {
                     data-icon="fa-regular:copyright"
                     data-width="20"
                 ></span>
-                Copyright <span id="footer-year">2024</span> by AntonyCJA. All rights
-                reserved
+                {data}
             </p>
         </footer>
     )

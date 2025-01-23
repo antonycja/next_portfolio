@@ -8,10 +8,35 @@ export default function Modal({ setState, projectsData }) {
     // const images = [Images.geri, Images.fottis]
     // const images = Object.keys(Images).map(key => Images[key]);
 
-    const contact = () => {
-        setState(false)
-        alert("clicked")
-    }
+    const handleSectionClick = (e, sectionId) => {
+        e.preventDefault();
+        setState(false);
+        // Get the target element
+        const element = document.getElementById(sectionId);
+        if (!element) return;
+    
+        // Get the actual navbar height dynamically
+        const navHeight = document.querySelector('nav')?.offsetHeight || 0;
+    
+        // Calculate the dynamic offset based on the viewport height
+        const viewportHeight = window.innerHeight;
+        const dynamicOffset = Math.min(viewportHeight * 0.01, -1); // Max 20px, scales down on smaller screens
+    
+        // Calculate the target position
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.scrollY - navHeight - dynamicOffset;
+    
+        // Add check for mobile devices (adjust the offset for mobile screens)
+        const isMobile = window.innerWidth <= 768;
+        const mobileOffset = isMobile ? 10 : 0;
+    
+        // Scroll to the target position with smooth scrolling
+        window.scrollTo({
+            top: offsetPosition - mobileOffset,
+            behavior: 'smooth'
+        });
+    };
+    
 
     return (
         <div className="modal-container" onClick={() => setState(false)}>
@@ -57,8 +82,8 @@ export default function Modal({ setState, projectsData }) {
 
                         </div>
                     </div>
-                    <div className="modal-contact">
-                        <a href="#Contact" onClick={contact} className="modal-contact-btn">Contact me</a>
+                    <div className="modal-contact btn">
+                        <a onClick={(e) => handleSectionClick(e, "Contact")} className="modal-contact-btn">Contact me</a>
                     </div>
 
                 </div>

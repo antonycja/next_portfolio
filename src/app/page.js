@@ -12,11 +12,12 @@ export const metadata = {
 
 import { lazy, Suspense } from 'react';
 import Contents from "@/constants/data.js";
-
+import Footer from '@/components/footer/footer';
 const HeroSection = lazy(() => import("@/sections/heroSection/heroPage.js"));
 const AboutSection = lazy(() => import("@/sections/aboutSection/aboutPage.js"));
 const ProjectsSection = lazy(() => import("@/sections/projectsSection/projectsPage.js"));
 const ContactSection = lazy(() => import("@/sections/contactSection/contactPage.js"));
+
 
 
 export default function Home() {
@@ -34,13 +35,19 @@ export default function Home() {
           <ProjectsSection projects={Contents.projects} />
         </section>
         <section id='Contact'>
-          <div>
-            <h1>This Page is under Construction...</h1>
+          {/* <div className='temp'>
+            <h1>This Page is under Construction... <span style={{ fontSize: 2 + 'rem' }}>&#129379;</span></h1>
+            <div>
+              <LottieAnimation />
+            </div>
+
             <h3>In the meantime, email me at: <a href="mailto:cjamaposa@gmail.com">cjamaposa@gmail.com</a></h3>
-          </div>
-          {/* <ContactSection /> */}
+          </div> */}
+
+          <ContactSection data={Contents.contact}/>
         </section>
       </Suspense>
+      <Footer data={Contents.footer}/>
     </>
   );
 }

@@ -1,20 +1,19 @@
-.contact-me {
-  width: 80%;
-  margin: auto;
-}
-
-.contact-me-bg {
-  height: 80dvh;
-  /* min-height: 90vh; */
-  /* max-height: 90vh; */
-  background-color: rgba(25, 50, 66, 1);
-  border: 2px solid yellow;
-}
-
 #Contact {
   position: relative;
   width: 100dvw;
-  left: 0;
+}
+
+.contact {
+  height: 100dvh;
+  background-color: rgba(25, 50, 66, 1);
+}
+
+.contact-me {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .top-img,
@@ -25,94 +24,84 @@
 .top-img {
   left: 0;
   top: 0;
+  width: 40dvw;
+  height: 65dvh;
 }
 .bottom-img {
   right: 0;
-  bottom: 0;
+  bottom: -20dvh;
+  width: 40dvw;
+  height: 65dvh;
 }
-.contact-me {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 .contact-box {
   margin-top: 10%;
   position: relative;
-  display: flex;
   border-radius: 2em;
-  background-color: rgba(18, 36, 47, 1);
-  position: relative;
-  /* border: 2px solid white; */
-  min-width: 79.489%;
-  max-width: 79.489%;
-  min-height: 72.149%;
-  max-height: 72.149%;
+  background: linear-gradient(145deg, rgba(18, 36, 47, 1), rgba(34, 58, 72, 1));
+  box-shadow: 4px 4px 10px rgba(18, 36, 47, 0.1),
+    /* Bottom-right shadow */ -4px -4px 10px rgba(255, 255, 255, 0.1); /* Top-left light */
+  width: 70dvw;
+  height: 60dvh;
   z-index: 1;
+  display: flex;
+  justify-content: space-between;
 }
-.contact-form {
-  /* border: 1px solid red; */
-  position: absolute;
-  width: 53%;
-  height: 100%;
-  right: 0;
-  border-radius: 2rem;
-  background-color: rgba(0, 0, 0, 0.1);
-  z-index: 2;
-}
-.success {
-  position: absolute;
-  z-index: 0;
-  left: 33%;
-  bottom: 35%;
-}
-.success-animation {
-  width: 100%;
-  height: 100vh;
-  background-size: cover;
-  pointer-events: none;
-}
+
 .image-side {
-  /* border: 1px solid blue; */
   position: relative;
   height: 100%;
+  /* width: 50%; */
+  aspect-ratio: 10/9;
+  display: flex;
+  justify-content: center;
+  flex-shrink: 0;
+  overflow: hidden;
 }
 
 .env {
-  /* position: absolute; */
-  top: 26%;
-  right: 24%;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  align-items: center;
   z-index: 100;
 }
-.env-text {
-  position: absolute;
-  z-index: -1;
-  text-align: center;
-  color: white;
-  font-size: 7rem;
-  font-weight: 500;
-  top: 55%;
-  left: 35%;
-  opacity: 0;
+.env > lottie-player:nth-child(1) {
+  width: 100% !important;
+  height: 100% !important;
+  padding: 4rem;
 }
 
-/* form */
+.contact-form {
+  flex-grow: 1;
+  height: 100%;
+  border-radius: 2rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 2;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
 .heading {
-  margin: 2em 2em 2em;
+  margin: 1.5rem 2rem;
   color: #fff;
-  font-weight: 500;
-  font-size: 2.25rem;
+  flex-direction: column;
+  width: 100%;
 }
+
 .heading h3 {
-  color: rgba(255, 52, 0, 0.6);
+  color: var(--color-btn-red);
   font-size: 1.5rem;
+  font-weight: 500;
 }
-form,
-form a {
-  margin: 2em;
-  font-weight: 200;
-  font-size: 0.9rem;
-  color: rgba(156, 156, 156, 1);
+.heading h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  font-family: var(--font-base);
 }
+
 .input-grp {
   margin-bottom: 3em;
   position: relative;
@@ -120,10 +109,27 @@ form a {
 .msg {
   margin-bottom: 1.5em;
 }
+
+form,
+form a {
+  margin: 2em;
+  font-weight: 200;
+  font-size: 0.9rem;
+  color: rgba(156, 156, 156, 1);
+}
+
+#email {
+  width: 120%;
+}
+#name {
+  width: 80%;
+}
+
+/* TODO: END */
+
 input,
 textarea {
   width: 90%;
-  max-width: 90%;
   padding: 0.5em 0.5em 0.2em;
   outline: 0;
   border: 0;
@@ -134,7 +140,7 @@ textarea {
 }
 input {
   border-bottom: 1px solid rgba(128, 128, 128, 1);
-  max-width: 80%;
+  width: 100%;
 }
 textarea {
   border: 1px solid rgba(128, 128, 128, 1);
@@ -147,7 +153,7 @@ label {
   left: 0;
   top: 0;
   cursor: text;
-  padding: 0.7em;
+  padding: 0.5rem;
   transition: 200ms;
 }
 
@@ -168,14 +174,20 @@ form a {
   font-size: 0.9rem;
   text-align: center;
   color: rgba(0, 0, 0, 1);
-  border-radius: 13px;
+  border-radius: 10px;
   background-color: #ff4d4d;
   width: 7em;
   margin: 0 1.5em 0 0.5em;
 }
+
+.submit-btn a:hover {
+  color: var(--color-hover-link-blue);
+}
+
 .submit-btn button:hover {
   background-color: rgba(0, 0, 0, 0);
-  /* border:.1px solid #ff4d4d; */
+  cursor: pointer;
+  outline: 0.1px solid #ff4d4d;
   color: #ff4d4d;
 }
 
@@ -192,7 +204,85 @@ textarea:valid ~ label {
 
 .name-email {
   display: flex;
-  justify-content: space-between;
 }
 
-/* End of Contact */
+@media screen and (max-width: 1024px) {
+  form {
+    text-align: center;
+  }
+  label,
+  text-area {
+    padding-left: 1.5rem;
+  }
+  .contact {
+    height: max-content;
+  }
+  .contact-me {
+    width: 90%;
+  }
+  .contact-box {
+    margin-block: 4rem 2rem;
+    flex-direction: column;
+    height: fit-content;
+    width: 100%;
+    box-shadow: 4px 4px 10px rgba(18, 36, 47, 0.1),
+      /* Bottom-right shadow */ -4px -4px 10px rgba(255, 255, 255, 0.1); /* Top-left light */
+  }
+
+  .heading {
+    width: unset;
+  }
+  .heading h3 {
+    font-size: 1.3rem;
+  }
+
+  .heading h1 {
+    font-size: 2rem;
+  }
+
+  .image-side {
+    aspect-ratio: 4/3;
+    height: auto;
+  }
+
+  .env > lottie-player:nth-child(1) {
+    padding: 1rem;
+  }
+
+  .top-img {
+    width: 80dvw;
+    height: 50dvh;
+  }
+  .bottom-img {
+    width: 80dvw;
+    height: 50dvh;
+  }
+  /* .contact main {
+    overflow: auto;
+  } */
+
+  input:focus ~ label,
+  input:valid ~ label {
+    padding-left: 1rem;
+    top: -1.6em;
+  }
+  textarea:focus ~ label,
+  textarea:valid ~ label {
+    padding-left: 1rem;
+    top: -2.5em;
+  }
+  .name-email > div:nth-child(2) > label:nth-child(2) {
+    padding-left: 0rem;
+  }
+  div.input-grp:nth-child(1) > label:nth-child(2) {
+    padding-left: 0.8rem;
+  }
+  #email {
+    width: 100%;
+  }
+  .email-me,
+  .email-me a {
+    font-weight: 500;
+    line-height: 2.5rem;
+  }
+}
