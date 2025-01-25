@@ -26,6 +26,10 @@ import camp6 from "../../public/projects/camp6.png";
 import lpt1 from "../../public/projects/lpt1.jpg";
 import maze1 from "../../public/projects/maze1.jpg";
 import maze2 from "../../public/projects/maze2.jpg";
+import robot1 from "../../public/projects/robot1.jpg";
+import robot2 from "../../public/projects/robot2.jpg";
+import robot3 from "../../public/projects/robot3.jpg";
+import robot4 from "../../public/projects/robot4.jpg";
 import bottom from "../../public/contact/bottom.png";
 import contact_bg from "../../public/contact/contact-bg.png";
 import envelope from "../../public/contact/envelope.svg";
@@ -65,4 +69,8 @@ export const Images = {
     contact_bg,
     envelope,
     top,
+    robot1,
+    robot2,
+    robot3,
+    robot4
 };

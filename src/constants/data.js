@@ -246,35 +246,49 @@ const Contents = {
             }
         },
         {
-            card_title: "web",
             project_images: [
-                { img: Images.fottis1, alt: "fottis finance" },
-                { img: Images.geri, alt: "geri restaurant" }
+                { img: Images.robot1, alt: "Robot engaging in combat" },
+                { img: Images.robot2, alt: "Multiple robots in the game world" },
+                { img: Images.robot3, alt: "Robot executing a command" },
+                { img: Images.robot4, alt: "Game server interface with connected clients" }
             ],
-            project_name: "coming soon",
-            project_text: "template ",
-            project_tags: ["tag1", "tag2", "tag3"],
+            project_name: "Robot Worlds",
+            project_text: "multiplayer game where clients connect to a server to control robots and engage in strategic combat.",
+            project_tags: ["Java", "Maven", "Sockets", "OOP", "JUnit"],
             more: {
-                project_type: "project type",
-                live: { link: "link", text: "open live project" },
-                github: { link: "link", text: "open project repo" },
-                summary: { title: "summary", text: "something was not right" },
+                project_type: "Multiplayer & Brownfields development",
+                live: { link: "link", text: "Open Project Demo" },
+                github: { link: "https://github.com/antonycja/robot-worlds-brownfields", text: "Open Project Repo" },
+                summary: { 
+                    title: "Summary", 
+                    text: "Robot Worlds is a multiplayer game designed to let players (or clients) connect to a world server and engage in combat using robots. Each robot has unique capabilities, and players can issue commands to navigate and battle within the game environment. The project emphasizes real-time interaction, strategic gameplay, and robust networking."
+                },
                 all_features: {
-                    title: "key features",
+                    title: "Key Features",
                     features: [
-                        { key: "feature1", feature: "this is it" },
-                        { key: "feature2", feature: "and this is just another one" },
+                        { key: "multiplayer", feature: "Real-time multiplayer gameplay with server-client architecture." },
+                        { key: "unique_robots", feature: "Each robot has unique capabilities, allowing for diverse strategies." },
+                        { key: "command_execution", feature: "Players can issue commands to their robots for navigation and combat." },
+                        { key: "strategic_combat", feature: "Engaging combat system that requires strategic planning and execution." },
+                        { key: "real_time_interaction", feature: "Real-time interaction between players and the game environment." },
+                        { key: "robust_networking", feature: "Stable and efficient networking to support multiple concurrent players." }
                     ]
                 },
                 all_technologies: {
                     title: "Technologies Used",
                     technologies: [
-                        { key: "tech", technology: "" },
-                        { key: "", technology: "" },
+                        { key: "java", feature: "Core programming language for game logic and networking." },
+                        { key: "maven", feature: "Used for dependency management and project build automation." },
+                        { key: "sockets", feature: "Socket programming for real-time communication between clients and server." },
+                        { key: "oop", feature: "Object-oriented principles for modular and reusable code." },
+                        { key: "junit", feature: "JUnit framework for rigorous unit testing of game components." },
+                        { key: "threads", feature: "Multi-threading for handling simultaneous client connections." }
                     ]
                 }
             }
-        },
+        }
+        
+
 
 
     ],
@@ -285,7 +299,7 @@ const Contents = {
         btnText: "Submit",
         email: "cjamaposa@gmail.com",
     },
-    
+
     footer: `Copyright ${year} by AntonyCJA. All rights reserved.`
 
     // sections: { home: {}, about: {}, projects: {}, contact: {} }
